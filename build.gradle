@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'war'
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.2.0'
+    
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.4.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '2.0.4.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web', version: '4.3.1.RELEASE'
+    testCompile group: 'org.springframework', name: 'spring-test', version: '4.3.1.RELEASE'
+    
+    compile group: 'com.github.derjust', name: 'spring-data-dynamodb', version: '5.0.3'
+    compile group: 'com.amazonaws', name:'aws-java-sdk-dynamodb', version:'1.11.396'
+}
